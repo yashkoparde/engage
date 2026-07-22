@@ -1,0 +1,31 @@
+{
+  "name": "engage-monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Engage — Real-time Interactive Classroom Platform (Faculty + Student Monorepo)",
+  "workspaces": [
+    "apps/*"
+  ],
+  "scripts": {
+    "dev": "concurrently -n "FACULTY,STUDENT" -c "blue,green" "npm run dev:faculty" "npm run dev:student"",
+    "dev:faculty": "npm --prefix apps/faculty run dev",
+    "dev:student": "npm --prefix apps/student run dev",
+    "dev:server": "npx ts-node apps/student/server.ts",
+    "build": "npm --prefix apps/faculty run build && npm --prefix apps/student run build",
+    "lint": "npm --prefix apps/faculty run lint && npm --prefix apps/student run lint"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "keywords": [
+    "education",
+    "realtime",
+    "gamification",
+    "classroom",
+    "supabase",
+    "react",
+    "vite"
+  ],
+  "author": "Yash Koparde <yashkoparde2022@gmail.com>",
+  "license": "MIT"
+}
