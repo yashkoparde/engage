@@ -2,12 +2,12 @@
   "name": "engage-monorepo",
   "version": "1.0.0",
   "private": true,
-  "description": "Engage — Real-time Interactive Classroom Platform (Faculty + Student Monorepo)",
+  "description": "Engage \u2014 Real-time Interactive Classroom Platform (Faculty + Student Monorepo)",
   "workspaces": [
     "apps/*"
   ],
   "scripts": {
-    "dev": "concurrently -n "FACULTY,STUDENT" -c "blue,green" "npm run dev:faculty" "npm run dev:student"",
+    "dev": "concurrently -n 'FACULTY,STUDENT' -c 'blue,green' 'npm run dev:faculty' 'npm run dev:student'",
     "dev:faculty": "npm --prefix apps/faculty run dev",
     "dev:student": "npm --prefix apps/student run dev",
     "dev:server": "npx ts-node apps/student/server.ts",
