@@ -27,5 +27,9 @@
     "vite"
   ],
   "author": "Yash Koparde <yashkoparde2022@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "optionalDependencies": {
+    "@tailwindcss/oxide-linux-x64-gnu": "^4.1.14",
+    "@tailwindcss/oxide-win32-x64-msvc": "^4.1.14"
+  }
 }
